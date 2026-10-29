@@ -125,8 +125,8 @@ loadNews() {
         date: new Date(n.createdAt).toLocaleDateString('es-CO', {
           day: '2-digit', month: 'long', year: 'numeric'
         }),
-        videoSrc: n.videoUrl ? `${environment.apiUrl}/${n.videoUrl}` : undefined,
-        imageSrc: n.imageUrl ? `${environment.apiUrl}/${n.imageUrl}` : undefined,
+        videoSrc: n.videoUrl ? `${environment.apiUrl}/api/${n.videoUrl}` : undefined,
+        imageSrc: n.imageUrl ? `${environment.apiUrl}/api/${n.imageUrl}` : undefined,
         comments: (n.comments || []).map((c: any) => ({
           id: c.id,
           newsId: n.id,
