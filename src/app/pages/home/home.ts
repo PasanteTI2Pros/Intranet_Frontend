@@ -124,8 +124,8 @@ loadNews() {
         date: new Date(n.createdAt).toLocaleDateString('es-CO', {
           day: '2-digit', month: 'long', year: 'numeric'
         }),
-        videoSrc: n.videoUrl ? `http://localhost:8081/api/${n.videoUrl}` : undefined,
-        imageSrc: n.imageUrl ? `http://localhost:8081/api/${n.imageUrl}` : undefined,
+        videoSrc: n.videoUrl ? `${environment.apiUrl}/${n.videoUrl}` : undefined,
+        imageSrc: n.imageUrl ? `${environment.apiUrl}/${n.imageUrl}` : undefined,
         comments: (n.comments || []).map((c: any) => ({
           id: c.id,
           newsId: n.id,
@@ -141,7 +141,7 @@ loadNews() {
     error: (err) => console.error('Error cargando noticias', err)
   });
 }
-      
+
 
 
   publishPost() {
