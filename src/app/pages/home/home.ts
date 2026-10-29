@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { HomeRightComponent } from '../home-right/home-right';
+import { environment } from '../../../environments/environment.production';
 import { NewsService } from '../../core/services/news.service';
 import { UserService } from '../../core/services/user.service';
 import { NewsCommentService } from '../../core/services/news-comment.service';
